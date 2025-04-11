@@ -31,7 +31,6 @@ function mousemove(e)
 	{
 		x = e.clientX - canvas.offsetLeft;
 		y = e.clientY - canvas.offsetTop;
-		color = "#" + Math.floor(Math.random()*16777215).toString(16);
 	}
 }
 
@@ -39,6 +38,7 @@ document.addEventListener("mousedown", mousedown);
 function mousedown(e)
 {
 	move = true
+	color = "#" + Math.floor(Math.random()*16777215).toString(16);
 }
 
 document.addEventListener("mouseup", mouseup);
