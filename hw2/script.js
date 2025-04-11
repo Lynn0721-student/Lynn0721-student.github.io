@@ -1,7 +1,7 @@
 // 定義變數
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
-let x = 0, y = 0, dx = 10, dy = 10, r = 30, color = "#0095DD", move = 0;
+let x = 0, y = 0, dx = 100, dy = 100, r = 30, color = "#0095DD", move = false;
 
 // 畫圓形
 function drawBall() 
@@ -37,14 +37,14 @@ function mousemove(e)
 document.addEventListener("mousedown", mousedown);
 function mousedown(e)
 {
-	move = 1
+	move = true
 	color = "#" + Math.floor(Math.random()*16777215).toString(16);
 }
 
 document.addEventListener("mouseup", mouseup);
 function mouseup(e)
 {
-	move = 0
+	move = false
 }
 
 // 更新畫布
