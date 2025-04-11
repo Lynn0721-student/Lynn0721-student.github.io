@@ -29,9 +29,9 @@ function mousemove(e)
 {
 	if(move)
 	{
-		color = "#" + Math.floor(Math.random()*16777215).toString(16);
 		x = e.clientX - canvas.offsetLeft;
 		y = e.clientY - canvas.offsetTop;
+		color = "#" + Math.floor(Math.random()*16777215).toString(16);
 	}
 }
 
