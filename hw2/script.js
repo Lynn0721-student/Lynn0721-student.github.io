@@ -19,7 +19,7 @@ function keyDownHandler(e)
 {
 	if(e.key == "ArrowRight")        x += dx;
 	else if(e.key == "ArrowLeft")    x -= dx;
-    else if(e.key == "ArrowUp")      y -= dy;
+    	else if(e.key == "ArrowUp")      y -= dy;
 	else if(e.key == "ArrowDown")    y += dy;
 }
 
@@ -27,7 +27,7 @@ function keyDownHandler(e)
 document.addEventListener("mousemove", mousemove);
 function mousemove(e)
 {
-	if(move == 1)
+	if(move)
 	{
 		x = e.clientX - canvas.offsetLeft;
 		y = e.clientY - canvas.offsetTop;
@@ -38,6 +38,7 @@ document.addEventListener("mousedown", mousedown);
 function mousedown(e)
 {
 	move = 1
+	color = "#" + Math.floor(Math.random()*16777215).toString(16);
 }
 
 document.addEventListener("mouseup", mouseup);
@@ -49,7 +50,7 @@ function mouseup(e)
 // 更新畫布
 function draw() 
 {	
-	//ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawBall();
     requestAnimationFrame(draw);
 }
