@@ -1,7 +1,7 @@
 // 定義變數
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
-let x = 0, y = 0, dx = 100, dy = 100, r = 10, color = "#0095DD", move = false;
+let x = 0, y = 0, dx = 1, dy = 1, r = 10, color = "#0095DD", move = false;
 
 // 畫圓形
 function drawBall() 
